@@ -1,0 +1,21 @@
+@tailwind base;
+
+.memorize-game {
+  @apply flex flex-col bg-gray-50 shadow-lg shadow-slate-400 rounded-lg w-[80vw] h-[80vh] min-w-[500px];
+}
+
+.memorize-game-header {
+  @apply flex items-center shadow-lg shadow-slate-400 rounded-lg m-3
+}
+
+.momerize-game-img {
+  @apply flex justify-start items-center h-8 w-8 m-2
+}
+
+.momerize-game-h3 {
+  @apply flex flex-1 justify-center items-center text-2xl text-[#3DB66A] font-semibold m-2
+}
+
+.memorize-game-main {
+  @apply flex flex-col m-2 items-center justify-center h-full
+}

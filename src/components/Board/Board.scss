@@ -1,0 +1,5 @@
+@tailwind base;
+
+.memorize-board {
+  @apply grid grid-cols-4 gap-4 
+}

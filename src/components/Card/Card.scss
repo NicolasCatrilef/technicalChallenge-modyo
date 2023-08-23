@@ -1,0 +1,30 @@
+@tailwind base;
+
+.memorize-card{
+  @apply cursor-pointer aspect-square;
+}
+
+.memorize-card-container{
+  @apply relative w-full h-full text-center	duration-500;
+  transform-style: preserve-3d;
+}
+
+.memorize-card-container-flipped {
+  transform: rotateY(180deg);
+}
+
+.memorize-card-back .memorize-card-front {
+  @apply relative w-full h-full text-center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 4px;
+}
+
+.memorize-card-back{
+  @apply flex justify-center items-center h-full w-full rounded;
+  box-shadow: 5px 5px 10px 0px rgb(0 0 0 / 50%);
+}
+
+.memorize-card-front {
+  @apply h-full w-full rounded;
+}

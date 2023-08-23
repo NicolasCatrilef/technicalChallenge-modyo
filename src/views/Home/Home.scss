@@ -1,0 +1,21 @@
+@tailwind base;
+
+.memorize-home {
+  @apply flex flex-col justify-center bg-gray-50 shadow-lg shadow-slate-400 rounded-lg w-[80vw] h-[80vh] min-w-[500px];
+}
+
+.memorize-home-header {
+  @apply flex flex-col items-center justify-center h-[25%] w-full
+}
+
+.memorize-home-main {
+  @apply flex flex-col m-2 items-center justify-start h-[25%] space-y-4
+}
+
+.memorize-home-h1 {
+  @apply font-bold tracking-[-3.5px] text-6xl text-[#3DB66A]
+}
+
+.memorize-home-button {
+  @apply cursor-pointer text-white border-[#3DC681] inline-block font-normal text-center align-middle text-base rounded py-3 px-6 transition ease-in-out delay-150 bg-[#3DC681] hover:bg-[#41D189] duration-300 
+}
