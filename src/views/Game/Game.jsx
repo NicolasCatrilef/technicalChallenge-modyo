@@ -18,7 +18,7 @@ const Game = () => {
   useEffect(() => {
     async function getData() {
       const response = await fetch(
-        `https://fed-team.modyo.cloud/api/content/spaces/animals/types/game/entries?per_page=2`
+        `https://fed-team.modyo.cloud/api/content/spaces/animals/types/game/entries?per_page=10`
       ).then(response => response.json());
   
       const animals = response.entries.map((img, idx) => {
@@ -88,7 +88,7 @@ const Game = () => {
     <article className='memorize-game'>
       <header className='memorize-game-header'>
         <img alt="Modyo" className='momerize-game-img' src={Logo} />
-        <h3 className='momerize-game-h3'>Memorize for</h3>
+        <h3 className='momerize-game-h3'>{player.name}</h3>
       </header>
       <main className='memorize-game-main'>
         <Board cards={randomData} isAnimation={isAnimation} handleSelectCard={handleSelectCard} />
