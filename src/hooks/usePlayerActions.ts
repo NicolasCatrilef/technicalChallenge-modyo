@@ -10,6 +10,8 @@ export const usePlayerActions = () => {
   };
 
   const changedBoard = (board:BoardPlayer) => {
+    console.log('changedBoard board :', board);
+    
     dispatch(changeBoard(board));
   };
 

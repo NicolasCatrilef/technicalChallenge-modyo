@@ -9,7 +9,8 @@ export interface Player {
 }
 
 const initialState: Player = (() => {
-  const persistedState = localStorage.getItem('_redux_player_');
+  const persistedState = localStorage.getItem('__redux__state__');
+  console.log('persistedState', persistedState)
   return persistedState ? JSON.parse(persistedState).players : {name: '', board: []};
 })(); 
 

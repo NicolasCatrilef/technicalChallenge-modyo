@@ -38,9 +38,9 @@ const Game = () => {
 
   useEffect(() => {
     const newRandom = [...shuffle(data), ...shuffle(data)];
-    setRandomData(newRandom.map((nr, idx) => {return {...nr, index: idx}}));
+    newRandom.length && setRandomData(newRandom.map((nr, idx) => {return {...nr, index: idx}}));
   }, [data]);
-
+  
 
   const shuffle = (array) => {
     let currentIndex = array.length,  randomIndex;
@@ -75,13 +75,11 @@ const Game = () => {
       setTimeout(() => {
         updateData.splice(card.index, 1, card);
         updateData.splice(selectedCard.index, 1, selectedCard);
-        setRandomData(updateData);
+        setRandomData(updateData); 
         setSelectedCard(null);
         setIsAnimation(false);
       }, 1000);
-    }
-    changedBoard(randomData);
-    
+    }    
     const existsCardDown = updateData.filter((data) => data.isFlipped === false);
     (existsCardDown.length === 0) && confetti();
   };
@@ -99,6 +97,4 @@ const Game = () => {
   )
 }
 
-export default Game
-
-// #131f37
+export default Game;
